@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.thisDayInfoWrapper{
+    position: relative;
+    padding: 36px;
+    max-width: 750px;
+    width: 100%;
+    background: var(#{--components-background-default});
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
+
+.cloudImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

@@ -1,11 +1,16 @@
-import React from 'react'
-
+import { ThisDay } from 'components/ThisDay/ThisDay'
+import { ThisDayInfo } from 'components/ThisDayInfo/ThisDayInfo'
+import { Days } from 'components/Days/Days'
 import './styles.scss'
 
 const HomePage = () => {
     return (
         <div className='homeWrapper'>
-            HomePage
+            <div className='wrapper'>
+                <ThisDay/>
+                <ThisDayInfo/>
+            </div>
+            <Days/>
         </div>
     )
 }
