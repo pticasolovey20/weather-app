@@ -68,7 +68,7 @@ const Days = () => {
             <Tabs/>
             <div className='days'>
                 {days.map((day: IDays) => (
-                    <Card item={day}/>
+                    <Card item={day} key={day.day}/>
                 ))}
             </div>
         </>

@@ -1,4 +1,3 @@
-import { GlobalSvgSelector } from 'assets/icons/global/GlobalSvgSelector'
 // import cloud from 'assets/images/cloud.png'
 import { ThisDayItem } from 'components/ThisDayItem/ThisDayItem'
 import { Item } from 'types/ITem'
@@ -33,7 +32,7 @@ const ThisDayInfo = () => {
         <div className='thisDayInfoWrapper'>
             <div className='thisDayInfoItems'>
                 {items.map((item: Item)=> (
-                    <ThisDayItem key={item.iconId} item={item}/>
+                    <ThisDayItem key={item.iconId} item={item} />
                 ))}
             </div>
         </div>
