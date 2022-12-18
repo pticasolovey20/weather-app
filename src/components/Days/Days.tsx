@@ -16,7 +16,7 @@ const Days = () => {
         {
             day: 'Tomorrow',
             day_info: 'Aug 28th',
-            icon_id: 'small_rain_sun',
+            icon_id: 'Patchy rain possible',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Drizzling',
@@ -24,7 +24,7 @@ const Days = () => {
         {
             day: 'Wed',
             day_info: 'Aug 28th',
-            icon_id: 'small_rain',
+            icon_id: 'Light rain shower',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Drizzling',

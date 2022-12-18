@@ -19,8 +19,10 @@ const HomePage = () => {
     return (
         <div className='homeWrapper'>
             <div className='wrapper'>
-                {weather && <ThisDay current={weather}/> }
-                <ThisDayInfo />
+                {weather && <>
+                    <ThisDay current={weather}/>
+                    <ThisDayInfo current={weather}/>
+                </> }
             </div>
             <Days/>
         </div>
