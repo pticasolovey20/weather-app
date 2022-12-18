@@ -2,15 +2,10 @@
 import { IndicatorSvgSelector } from 'assets/icons/indicator/IndicatorSvgSelector'
 import { prepareWindSpeed } from 'services/prepareWindSpeed'
 import { prepareWindDir } from 'services/prepareWindDir'
-import { IWeather } from 'types/IWeather'
 
 import './styles.scss'
 
-interface Params {
-    current: IWeather
-}
-
-const ThisDayInfo = ({current}:Params) => {
+const ThisDayInfo = () => {
     return (
         <div className='thisDayInfoWrapper'>
             <div className='thisDayInfoItems'>
@@ -19,21 +14,21 @@ const ThisDayInfo = ({current}:Params) => {
                         <IndicatorSvgSelector id='temp'/>
                     </div>
                     <div className='indicatorName'>Temperature:</div>
-                    <div className='indicatorValue'>{current.temp_c.toFixed()}° - feels like {current.feelslike_c.toFixed()}°</div>
+                    <div className='indicatorValue'>{20}° - feels like {18}°</div>
                 </div>
                 <div className='item'>
                     <div className='indicator'>
                         <IndicatorSvgSelector id='pressure'/>
                     </div>
                     <div className='indicatorName'>Pressure:</div>
-                    <div className='indicatorValue'>{current.pressure_mb} mm Hg</div>
+                    <div className='indicatorValue'>{760} mm Hg</div>
                 </div>
                 <div className='item'>
                     <div className='indicator'>
                         <IndicatorSvgSelector id='precipitation'/>
                     </div>
                     <div className='indicatorName'>Precipitation:</div>
-                    <div className='indicatorValue'>{current.precip_mm ? current.precip_mm : 'no precipitation'}</div>
+                    <div className='indicatorValue'>'no precipitation'</div>
                 </div>
                 <div className='item'>
                     <div className='indicator'>
@@ -41,9 +36,9 @@ const ThisDayInfo = ({current}:Params) => {
                     </div>
                     <div className='indicatorName'>Wind:</div>
                     <div className='indicatorValue'>
-                        {prepareWindSpeed(current.wind_kph).toFixed() + 
+                        {prepareWindSpeed(25).toFixed() + 
                         ' m/s ' + 
-                        prepareWindDir(current.wind_dir)}
+                        prepareWindDir('WNW')}
                     </div>
                 </div>
             </div>
